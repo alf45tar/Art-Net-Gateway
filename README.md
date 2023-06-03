@@ -4,7 +4,7 @@ Rock-solid ESP8266 based WiFi Art-Net to DMX.
 
 ## Why another one?
 
-There are a lot of similar projects out there but no one I tried is stable. Art-Net Gateway never restarts even after days of work.
+There are a lot of similar projects out there but no one I tried is stable. Art-Net Gateway never restarts even after days of uninterrupted work.
 
 ## How to connect to the WiFi
 
@@ -30,7 +30,7 @@ Art-Net-Gateway uses a WiFi connection manager with web captive portal. The conf
 
 ## Supported boards
 
-I tested it only with ESP01S. Any ESP8266 board should works as well.
+I tested it only with ESP01S. Any ESP8266 board should work as well.
 
 The ESP8266 has two hardware UARTS (Serial ports):
  - UART0 on pins GPIO1 (TX0) and GPIO3 (RX0)
