@@ -6,10 +6,16 @@ Rock-solid ESP8266 based WiFi Art-Net to DMX.
 
 There are a lot of similar projects out there but no one I tried is stable. Art-Net Gateway never reboot after days of work.
 
-# How to use it
+# How to connect to the WiFi
 
-It connect to last AP within 15 seconds or run [WiFiManager](https://github.com/tzapu/WiFiManager) portal creating the "Art-Net Gateway Setup" with captive portal for configuration.
-If no user connected to portal within 60 seconds it activate the WiFI in AP mode with 
+- Art-Net-Gateway uses a WiFi connection manager with web captive portal. The configuration portal is of the captive variety, so on various devices it will present the configuration dialogue as soon as you connect to the created access point.
+- When your ESP starts up, it sets it up in Station mode and tries to connect to a previously saved Access Point within 15 seconds
+- If this is unsuccessful (or no previous network saved or timeout) it moves the ESP into Access Point mode (default ip 192.168.4.1)
+- Using any wifi enabled device with a browser (computer, phone, tablet) connect to the newly created Access Point
+- Because of the Captive Portal and the DNS server you will either get a 'Join to network' type of popup or get any domain you try to access redirected to the configuration portal
+- Choose one of the access points scanned, enter password, click save
+- ESP will try to connect. If successful Art-Net Gateway is up and running. If not, reconnect to AP and reconfigure.
+- If no user connect to within 60 seconds ...
 
 # How to compile it
 
@@ -17,13 +23,13 @@ If no user connected to portal within 60 seconds it activate the WiFI in AP mode
 - Dowload the repository into a folder called Art-Net-Gateway
 - Install the [WiFiManager](https://github.com/tzapu/WiFiManager) library using the Arduino IDE Library Manager via Sketch->Include Libray->Manage Libraries...
 - Download the [ArtnetnodeWifi](https://github.com/rstephan/ArtnetnodeWifi) library as ZIP file and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into ~/Documents/Arduino/libraries/ArtnetnodeWifi folder).
-- Download the [espDMX](https://github.com/mtongnz/espDMX) library as ZIP file and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into ~/Documents/Arduino/libraries/espDMX folder).
+- Download the [espDMX](https://github.com/alf45tar/espDMX) library as ZIP file and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into ~/Documents/Arduino/libraries/espDMX folder).
 - Open Art-Net-Gateway.ino
 - Compile it!
 
-# Supported board
+# Supported boards
 
-I tested it only with ESP01S.
+I tested it only with ESP01S. Any ESP8266 board should works as well.
 
 The ESP8266 has two hardware UARTS (Serial ports):
  - UART0 on pins GPIO1 (TX0) and GPIO3 (RX0)
@@ -31,12 +37,11 @@ The ESP8266 has two hardware UARTS (Serial ports):
 
 DMX OUT interface (RS-485) is connected to UART1 (GPI02) using a [SN75176](https://www.ti.com/lit/ds/symlink/sn75176a.pdf) as transceiver.
 
+UART0 (Serial) is used to flash the firmware and for error log.
 
-UART0 (Serial) is used to upload the firmware and for error log.
+The gateway requires 3.3V for the ESP board and 5V for the RS-485 transceiver. The power circuit depends by the application.
 
 # Schematic
-
-
 
 ```
 +------------------------------------------+
