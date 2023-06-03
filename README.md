@@ -4,7 +4,7 @@ Rock-solid ESP8266 based WiFi Art-Net to DMX.
 
 ## Why another one?
 
-There are a lot of similar projects out there but no one I tried is stable. Art-Net Gateway never reboot after days of work.
+There are a lot of similar projects out there but no one I tried is stable. Art-Net Gateway never restarts even after days of work.
 
 ## How to connect to the WiFi
 
