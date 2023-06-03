@@ -1,10 +1,25 @@
 # Art-Net-Gateway
 
-Rock-solid ESP8266 based WiFi ArtNet to DMX.
+Rock-solid ESP8266 based WiFi Art-Net to DMX. 
 
 # Why another one?
 
 There are a lot of similar projects out there but no one I tried is stable. Art-Net Gateway never reboot after days of work.
+
+# How to use it
+
+It connect to last AP within 15 seconds or run [WiFiManager](https://github.com/tzapu/WiFiManager) portal creating the "Art-Net Gateway Setup" with captive portal for configuration.
+If no user connected to portal within 60 seconds it activate the WiFI in AP mode with 
+
+# How to compile it
+
+- Download and install [Arduino IDE 2](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing)
+- Dowload the repository into a folder called Art-Net-Gateway
+- Install the [WiFiManager](https://github.com/tzapu/WiFiManager) library using the Arduino IDE Library Manager via Sketch->Include Libray->Manage Libraries...
+- Download the [ArtnetnodeWifi](https://github.com/rstephan/ArtnetnodeWifi) library as ZIP file and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into ~/Documents/Arduino/libraries/ArtnetnodeWifi folder).
+- Download the [espDMX](https://github.com/mtongnz/espDMX) library as ZIP file and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into ~/Documents/Arduino/libraries/espDMX folder).
+- Open Art-Net-Gateway.ino
+- Compile it!
 
 # Supported board
 
