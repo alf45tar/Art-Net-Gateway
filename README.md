@@ -22,8 +22,8 @@ Art-Net-Gateway uses a WiFi connection manager with web captive portal. The conf
 
 - Download and install [Arduino IDE 2](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing)
 - Install the [WiFiManager](https://github.com/tzapu/WiFiManager) library using the Arduino IDE Library Manager via Sketch->Include Libray->Manage Libraries...
-- Download the [ArtnetnodeWifi](https://github.com/rstephan/ArtnetnodeWifi) library as ZIP file and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into `~/Documents/Arduino/libraries/ArtnetnodeWifi` folder)
-- Download the [espDMX](https://github.com/alf45tar/espDMX) library as ZIP file and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into `~/Documents/Arduino/libraries/espDMX` folder)
+- Download the [ArtnetnodeWifi](https://github.com/rstephan/ArtnetnodeWifi/archive/refs/heads/master.zip) library and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into `~/Documents/Arduino/libraries/ArtnetnodeWifi` folder)
+- Download the [espDMX](https://github.com/alf45tar/espDMX/archive/refs/heads/master.zip) library and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into `~/Documents/Arduino/libraries/espDMX` folder)
 - [Dowload](https://github.com/alf45tar/Art-Net-Gateway/archive/refs/heads/main.zip) the Art-Net Gateway repository and unzip into a folder called `Art-Net-Gateway`
 - Open `Art-Net-Gateway.ino`
 - Compile it!
