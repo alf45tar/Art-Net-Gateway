@@ -66,3 +66,16 @@ GPIO2 --------| D         GND |---+------ Ground (XLR pin 1)
                                   |
 GND   ----------------------------+
 ```
+
+# How to flash ESP01S with Arduino Uno
+
+There are a lot of different way to flash the ESP01S board. My preferred mode is using an Arduino Uno as USB-to-TTL (holding RST to GND).
+
+Remember, the ESP runs on 3.3V, while your Arduino Uno has a 5V powered TX/RX. This option worked with my setup but be advised, it might damage your devices.
+
+ESP01S|Arduino Uno|Note
+------|-----------|----
+TX0|TX|
+RX0|RX|
+3V3|3.3V|Connect only if the ESP01S board is not powered via other source 
+GND|GND|
