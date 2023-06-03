@@ -6,7 +6,7 @@
 #include <ESP8266WiFi.h>
 #include <WiFiManager.h>
 #include <ArtnetnodeWifi.h>
-#include "espDMX.h"
+#include <espDMX.h>
 
 #define VERSION     "1.0.0"
 #define ARTNET_NODE "Art-Net Gateway"
