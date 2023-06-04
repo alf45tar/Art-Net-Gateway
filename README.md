@@ -56,19 +56,35 @@ The gateway requires 3.3V for the ESP board and 5V for the RS-485 transceiver. T
 | +---+  |                  GND +  + TX0   |
 | +------+                                 |
 +------------------------------------------+
-    
-            RESET
-            Button
-              |
-            --+-- 
-RST   -----+     +----- GND
+ 
+          3.3V 
+           + 
+           | 
+           \      RESET
+        5K /      Button
+           \        |
+           |      --+-- 
+RST   -----+-----+     +----- GND
 
 
-            PROGRAM
-            Button
-              |
-            --+-- 
-GPIO0 -----+     +----- GND
+          3.3V 
+           + 
+           | 
+           \      PROGRAM
+        5K /      Button
+           \        |
+           |      --+-- 
+GPIO0 -----+-----+     +----- GND
+
+
+          3.3V 
+           + 
+           | 
+           \
+        5K /
+           \ 
+           |
+CH_PD -----+
 
 
                      +5V
