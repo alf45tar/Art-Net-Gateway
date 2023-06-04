@@ -12,11 +12,11 @@ Art-Net-Gateway uses a WiFi connection manager with web captive portal. The conf
 
 - When your ESP starts up, it sets it up in Station mode and tries to connect to a previously saved Access Point
 - If this is unsuccessful (or no previous network saved or after the 15 seconds timeout) it moves the ESP into Access Point mode
-- Using any WiFi enabled device with a browser (computer, phone, tablet) connect to the newly created Access Point called "Art-Net Gateway Setup"
+- Using any WiFi enabled device with a browser (computer, phone, tablet) connect to the newly created Access Point called `Art-Net Gateway Setup`
 - Because of the captive portal you will either get a 'Join to network' type of popup or get any domain you try to access redirected to the configuration portal
 - Choose one of the access points scanned, enter password, change the default Art-Net Universe and click Save
 - ESP will try to connect. If successful Art-Net Gateway is up and running connected to your WiFi network. If not, reconnect to AP and reconfigure.
-- If no user connect to the Access Point within 60 seconds another Access Point called "Art-Net Gateway" is created without the captive portal for normal operation
+- If no user connect to the Access Point within 60 seconds another Access Point called `Art-Net Gateway` is created without the captive portal for normal operation
 
 ## How to compile it
 
