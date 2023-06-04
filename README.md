@@ -21,9 +21,9 @@ Art-Net-Gateway uses a WiFi connection manager with web captive portal. The conf
 ## How to compile it
 
 - Download and install [Arduino IDE 2](https://docs.arduino.cc/software/ide-v2/tutorials/getting-started/ide-v2-downloading-and-installing)
-- Install the [WiFiManager](https://github.com/tzapu/WiFiManager) library using the Arduino IDE Library Manager via Sketch->Include Libray->Manage Libraries...
-- Download the [ArtnetnodeWifi](https://github.com/rstephan/ArtnetnodeWifi/archive/refs/heads/master.zip) library and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into `~/Documents/Arduino/libraries/ArtnetnodeWifi` folder)
-- Download the [espDMX](https://github.com/alf45tar/espDMX/archive/refs/heads/master.zip) library and add to Arduino IDE using Sketch->Include Library->Add .ZIP Library... (or unzip into `~/Documents/Arduino/libraries/espDMX` folder)
+- Install the [WiFiManager](https://github.com/tzapu/WiFiManager) library using the Arduino IDE Library Manager via `Sketch > Include Libray > Manage Libraries`
+- Download the [ArtnetnodeWifi](https://github.com/rstephan/ArtnetnodeWifi/archive/refs/heads/master.zip) library and add to Arduino IDE using `Sketch > Include Library > Add .ZIP Library` (or unzip into `~/Documents/Arduino/libraries/ArtnetnodeWifi` folder)
+- Download the [espDMX](https://github.com/alf45tar/espDMX/archive/refs/heads/master.zip) library and add to Arduino IDE using `Sketch > Include Library > Add .ZIP Library` (or unzip into `~/Documents/Arduino/libraries/espDMX` folder)
 - [Dowload](https://github.com/alf45tar/Art-Net-Gateway/archive/refs/heads/main.zip) the Art-Net Gateway repository and unzip into a folder called `Art-Net-Gateway`
 - Open `Art-Net-Gateway.ino`
 - Compile it!
@@ -90,7 +90,7 @@ GND   ----------------------------+
 
 ## How to flash ESP01S with Arduino Uno
 
-There are a lot of different way to flash the ESP01S board. My preferred mode is using an Arduino Uno as USB-to-TTL (holding RST to GND).
+There are a lot of different way to flash the ESP01S board. My preferred mode is with an Arduino Uno as USB-to-TTL (holding RST to GND).
 
 Remember, the ESP runs on 3.3V, while your Arduino Uno has a 5V powered TX/RX. This option worked with my setup but be advised, it might damage your devices.
 
