@@ -8,7 +8,7 @@
 #include <ArtnetnodeWifi.h>
 #include <espDMX.h>
 
-#define VERSION     "1.0.1"
+#define VERSION     "1.0.2"
 #define ARTNET_NODE "Art-Net Gateway"
 #define WM_AP_NAME  "Art-Net Gateway Setup"
 #define AP_NAME     "Art-Net Gateway"
@@ -36,6 +36,7 @@ void setup()
   char        universe[33];
 
   Serial.begin(115200);
+  Serial.println("");
   Serial.println("");
   Serial.print("Art-Net Gateway ");
   Serial.print(VERSION);
