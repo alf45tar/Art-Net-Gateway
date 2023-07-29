@@ -8,12 +8,11 @@
 #include <ArtnetnodeWifi.h>
 #include <espDMX.h>
 
-#define VERSION     "1.0.2"
+#define VERSION     "1.0.3"
 #define ARTNET_NODE "Art-Net Gateway"
 #define WM_AP_NAME  "Art-Net Gateway Setup"
 #define AP_NAME     "Art-Net Gateway"
 
-WiFiUDP         UdpSend;
 ArtnetnodeWifi  artnetnode;
 
 bool shouldSaveConfig = false;
@@ -56,12 +55,17 @@ void setup()
   WiFiManagerParameter universe_par("universe", "Art-Net Universe [0-32767]", universe, 5);
   wm.addParameter(&universe_par);
   wm.setSaveConfigCallback(saveConfigCallback);
+  wm.setParamsPage(true);
+  wm.setBreakAfterConfig(true);
   wm.setConnectTimeout(15);
   wm.setConfigPortalTimeout(60);
 
   if (!wm.autoConnect(WM_AP_NAME)) {
     // WiFiManager portal timeout
-    Serial.print("StartAP with SSID:  ");
+    // Switch to AP mode
+    WiFi.persistent(false); // These 2 lines are a required work-around
+    WiFi.mode(WIFI_OFF);    // otherwise AP doesn't work
+    Serial.print("StartAP with SSID: ");
     Serial.print(AP_NAME);
     Serial.print("... ");
     Serial.println(WiFi.softAP(AP_NAME) ? "Ready" : "Failed!");
