@@ -6,7 +6,7 @@ Rock-solid ESP8266 based WiFi Art-Net to DMX.
 
 ~~There are a lot of similar projects out there but no one I tried is stable. Art-Net Gateway never restarts even after days of uninterrupted work.~~
 
-Finally I found an amazing replacement and this project has been **superseed** by [ESP32-DMX-WiFi](https://github.com/alf45tar/ESP32-DMX-WiFi).
+Finally I found an amazing replacement and this project has been **superseed** by [ESP-DMX-WiFi](https://github.com/alf45tar/ESP-DMX-WiFi) or [ESP32-DMX-WiFi](https://github.com/alf45tar/ESP32-DMX-WiFi).
 
 ## How to connect to the WiFi
 
